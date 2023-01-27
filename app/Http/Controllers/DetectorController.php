@@ -69,7 +69,7 @@ class DetectorController extends Controller
 
     public function datadetector(){
         $detectores=DB::table('detectors')
-        ->join('cevems','cevems.id','=','cevem_id','state_id')
+        ->join('cevems','cevems.id','=','cevem_id','cevem_id')
         ->join('states','state_id','=','states.id')
         ->get();
 

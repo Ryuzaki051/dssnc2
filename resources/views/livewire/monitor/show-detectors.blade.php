@@ -1,19 +1,21 @@
 <div>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">ip_DT</th>
-            <th scope="col">mam</th>
-            <th scope="col">storage</th>
-            <th scope="col">opt</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row"></th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+
+    <div class="container card">
+        <div class="card-body">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <a href="">Xendata</a>
+                    </div>
+                    <div class="col">
+                      <a href="{{ route('detector.listado') }}">Detector</a>
+                    </div>
+                    <div class="col">
+                      <a href="">OMP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

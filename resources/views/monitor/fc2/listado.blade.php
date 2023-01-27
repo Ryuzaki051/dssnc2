@@ -29,6 +29,7 @@
                                     <th>mam(%)</th>
                                     <th>storage(%)</th>
                                     <th>opt(%)</th>
+                                    <th>actualizdo</th>
                                 </tr>
                             </thead>
 
@@ -75,7 +76,7 @@
             ajax: "{{ route('detector.data') }}",
             columns: [
                 {
-                    data: 'id'
+                    data: 'cevem_id'
                 },
                 {
                     data: 'state'
@@ -94,6 +95,9 @@
                 },
                 {
                     data: 'opt_prcnt'
+                },
+                {
+                    data: 'updated_at'
                 },
             ],
 
