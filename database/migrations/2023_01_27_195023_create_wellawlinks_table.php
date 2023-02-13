@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('ip_wellav',20);
 
+            $table->unsignedBigInteger('cevem_id');
+            $table->foreign('cevem_id')->references('id')->on('cevems');
+
             $table->timestamps();
         });
     }
