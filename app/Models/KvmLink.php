@@ -14,4 +14,11 @@ class KvmLink extends Model
     protected $fillable=[
         'ip_kvm'
     ];
+
+
+    //Relacion uno a uno inversa
+    public function Cevem(){
+        return $this->belongsTo(Cevem::class);
+    }
+
 }

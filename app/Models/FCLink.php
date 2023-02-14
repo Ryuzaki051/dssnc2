@@ -15,4 +15,11 @@ class FCLink extends Model
         'url'
     ];
 
+
+    //Relacion uno a uno inversa
+    public function Cevem()
+    {
+        return $this->belongsTo(Cevem::class);
+    }
+
 }

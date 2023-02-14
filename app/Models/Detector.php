@@ -16,4 +16,9 @@ class Detector extends Model
         'opt_prcnt'
     ];
 
+    //Relacion uno a muchos inversa
+    public function cevem(){
+        return $this->belongsTo(Cevem::class);
+    }
+
 }

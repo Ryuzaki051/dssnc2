@@ -18,4 +18,11 @@ class XDLink extends Model
         'ip_libreria'
     ];
 
+    //Relacion uno a uno inversa
+
+    public function Cevem()
+    {
+        return $this->belongsTo(Cevem::class);
+    }
+
 }

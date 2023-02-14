@@ -16,4 +16,9 @@ class WellavLink extends Model
         'cevem_id'
     ];
 
+    //Relacion uno a muchos inversa
+    public function Cevem{
+        return $this->belongsTo(Cevem::class);
+    }
+
 }

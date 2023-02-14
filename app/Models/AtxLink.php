@@ -16,4 +16,9 @@ class AtxLink extends Model
         'cevem_id'
     ];
 
+    //Relacion uno a muchos inversa
+    public function cevem(){
+        return $this->belongsTo(Cevem::class);
+    }
+
 }

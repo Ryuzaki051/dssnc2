@@ -28,9 +28,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});
 
-Route::resource('monitoreo', MonitorController::class);
+
+    Route::resource('monitoreo', MonitorController::class);
 Route::resource('operacion', OperacionController::class);
 
 /* Prueba */
@@ -42,3 +42,11 @@ Route::post('/detectores',[DetectorController::class, 'store'])->name('detector.
 Route::get('/listado',[DetectorController::class, 'listado'])->name('detector.listado');
 /* urL de la data el listado by ajax */
 Route::get('/datatables/detector',[DetectorController::class, 'datadetector'])->name('detector.data');
+
+
+
+
+
+});
+
+
