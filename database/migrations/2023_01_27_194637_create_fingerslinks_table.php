@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('fingerslinks', function (Blueprint $table) {
             $table->id();
             $table->string('url');
+
+            $table->unsignedBigInteger('cevem_id');
+            $table->foreign('cevem_id')->references('id')->on('cevems');
             
             $table->timestamps();
         });
