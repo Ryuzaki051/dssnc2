@@ -12,7 +12,7 @@ class KvmLink extends Model
     protected $table="kvmlinks";
 
     protected $fillable=[
-        'ip_kvm'
+        'ip_kvm','cevem_id'
     ];
 
 
