@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                <div class="card">
                 <div class="card-body">
-                    table
+                    @livewire('operation.show-cevems')
                 </div>
                </div>
 
