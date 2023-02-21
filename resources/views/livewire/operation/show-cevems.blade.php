@@ -1,5 +1,5 @@
 <div>
-    
+
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
         Panel General "Renovacion 2023"
     </h2>
@@ -30,8 +30,6 @@
                                     <th>Wellav</th>
                                     <th>KVM</th>
                                     <th>Xclarity</th>
-                                    <th>ATX</th>
-                                    <th>DPM</th>                                    
                                 </tr>
                             </thead>
 
@@ -74,32 +72,75 @@
             language: {
                 "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
             },
-            ajax: "",
-            columns: [
+            ajax: "http://dssnc.test/list_xd",
+            columns: [{
+                    data: 'cevem_id'
+                },
+
                 {
-                    data: ''
+                    data: 'cevem'
                 },
                 {
-                    data: ''
+                    data: 'state'
                 },
                 {
-                    data: ''
+                    data: 'name',
+                    render: function(data, type, row) {
+                        if (type === 'display') {
+                            var words = data.split(' ');
+                            var text = words[2];
+                            return text;
+
+                        }
+                        return data;
+                    }
                 },
                 {
-                    data: ''
+                    data: 'url',
+                    render: function(data, type, row) {
+                        return '<a href="' + data +
+                            '" target="_blank" ><img src="{{ asset('images/fc2-logo.png') }}" width="32" height="32"  alt=""></a>'
+                    }
                 },
                 {
-                    data: ''
+                    data: 'xendatas',
+                    render: function(data, type, row) {
+                        var info = data[0].ip_libreria;
+                        return '<a href="http://' + info +
+                            '/login.php" target="_blank"><img src="{{ asset('images/libreria.jpg') }}" width="36" height="36"></a>'
+                    }
                 },
                 {
-                    data: ''
+                    data: 'wellavs',
+                    render: function(data, type, row) {
+                        var info = data[0].ip_wellav;
+
+                        return '<a href="http://' + info +
+                            '/" target="_blank"><img src="{{ asset('images/wellav.jpg') }}" width="32" height="32"></a>'
+                    }
                 },
                 {
-                    data: ''
+                    data: 'kvms',
+                    render: function(data, type, row) {
+                        var info = data[0].ip_kvm;
+                        return '<a href="http://' + info +
+                            '/" target="_blank"><img src="{{ asset('images/kvm.jpg') }}" width="32" height="32"></a>'
+                    }
                 },
                 {
-                    data: ''
-                },
+                    data: 'xclaritys',
+                    render: function(data, type, row) {
+                        var select = '<select>';
+                        $.each(row.xclaritys, function(key, value) {
+                            select += '<option value="' + value.cevem_id + '"><a href=http://"'+ value.ip_xclarity+'" target="_blank">XC</a></option>';
+                        });
+                        select += '</select>';
+                        return select;
+                    }
+
+                }
+
+
             ],
 
         });

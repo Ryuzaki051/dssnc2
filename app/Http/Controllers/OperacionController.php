@@ -51,6 +51,7 @@ class OperacionController extends Controller
                 ->select('cevem_id','ip_xclarity')
                 ->where('cevem_id', $filaxc->cevem_id)->get();
             $filaxc->xclaritys = $xclaritys;
+
         }
 
         foreach ($operativo as $filatx) {
@@ -67,6 +68,10 @@ class OperacionController extends Controller
             $filadmp->dmps = $dmps;
         }
 
-        return $operativo;
+        $cevems=$operativo;
+
+        $dtables=datatables()->collection($cevems)->toJson();
+
+        return $dtables;
     }
 }
