@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('xclaritylinks', function (Blueprint $table) {
             $table->id();
+            $table->integer('no_servidor');
+            $table->string('xc_servidor');
             $table->string('ip_xclarity',20);
             
             $table->unsignedBigInteger('cevem_id');
             $table->foreign('cevem_id')->references('id')->on('cevems');
-
-            $table->timestamps();
         });
     }
 

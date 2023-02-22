@@ -19,7 +19,12 @@ return new class extends Migration
             $table->double('mam_prcnt');
             $table->double('storage_prcnt');
             $table->double('opt_prcnt');
-            
+
+            $table->integer('ram');
+            $table->integer('cpu');
+            $table->integer('cant_hilos');
+            $table->integer('peticiones');
+
             $table->unsignedBigInteger('cevem_id');
             $table->foreign('cevem_id')->references('id')->on('cevems');
             

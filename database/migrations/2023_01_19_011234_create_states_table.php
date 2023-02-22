@@ -21,7 +21,6 @@ class CreateStatesTable extends Migration
             $table->foreign('users_id')->references('id')->on('users');
 
             $table->timestamps();
-
         });
     }
 

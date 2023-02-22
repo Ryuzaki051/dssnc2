@@ -27,7 +27,7 @@
                                     <th>Asignado</th>
                                     <th>FC2</th>
                                     <th>Libreria</th>
-                                    <th>Wellav</th>
+                                    <th>OMP</th>
                                     <th>KVM</th>
                                     <th>Xclarity</th>
                                 </tr>
@@ -132,12 +132,12 @@
                     render: function(data, type, row) {
                         var select = '<select>';
                         $.each(row.xclaritys, function(key, value) {
-                            select += '<option value="' + value.cevem_id + '"><a href=http://"'+ value.ip_xclarity+'" target="_blank">XC</a></option>';
+                            select += '<option value="' + value.cevem_id +
+                                '"><a href="'+value.ip_xclarity+'"><img src="{{ asset('images/lenovo-xclarity.png') }}" width="32" height="32" ></a></option>';
                         });
                         select += '</select>';
                         return select;
                     }
-
                 }
 
 
