@@ -72,7 +72,7 @@
             language: {
                 "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
             },
-            ajax: "http://dssnc.test/list_xd",
+            ajax: "{{ route('operativo.listado') }}",
             columns: [{
                     data: 'cevem_id'
                 },
@@ -130,20 +130,24 @@
                 {
                     data: 'xclaritys',
                     render: function(data, type, row) {
-                        var select = '<select>';
+                        var select = '<select class="form-select" onchange="redirectToServer(this)">';
+                            select+="<option selected>XC</option>";
                         $.each(row.xclaritys, function(key, value) {
-                            select += '<option value="' + value.cevem_id +
-                                '"><a href="'+value.ip_xclarity+'"><img src="{{ asset('images/lenovo-xclarity.png') }}" width="32" height="32" ></a></option>';
+                            select += '<option value="https://' + value.ip_xclarity +
+                                '/#/home">XC ' + value.no_servidor + '</option>';
                         });
                         select += '</select>';
                         return select;
-                    }
+                    },
                 }
-
-
             ],
 
         });
+
+        function redirectToServer(select) {
+                        var url = select.value;
+                        window.open(url, '_blank');
+                    }
     </script>
 
 

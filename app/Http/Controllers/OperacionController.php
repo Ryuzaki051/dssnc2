@@ -48,7 +48,7 @@ class OperacionController extends Controller
 
         foreach ($operativo as $filaxc) {
             $xclaritys = DB::table('xclaritylinks')
-                ->select('cevem_id','ip_xclarity')
+                ->select('no_servidor', 'xc_servidor','cevem_id','ip_xclarity')
                 ->where('cevem_id', $filaxc->cevem_id)->get();
             $filaxc->xclaritys = $xclaritys;
 

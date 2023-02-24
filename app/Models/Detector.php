@@ -13,7 +13,11 @@ class Detector extends Model
         'ip_detector',
         'mam_prcnt',
         'storage_prcnt',
-        'opt_prcnt'
+        'opt_prcnt',
+        'ram',
+        'cpu',
+        'cant_hilos',
+        'peticiones'
     ];
 
     //Relacion uno a muchos inversa

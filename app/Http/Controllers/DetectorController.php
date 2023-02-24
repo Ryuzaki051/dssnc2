@@ -31,7 +31,11 @@ class DetectorController extends Controller
             [
                 'mam_prcnt'=>$request->mam,
                 'storage_prcnt'=>$request->storage,
-                'opt_prcnt'=>$request->opt
+                'opt_prcnt'=>$request->opt,
+                'ram'=>$request->ram,
+                'cpu'=>$request->cpu,
+                'cant_hilos'=>$request->cant_hilos,
+                'peticiones'=>$request->peticiones
             ]
         );
 

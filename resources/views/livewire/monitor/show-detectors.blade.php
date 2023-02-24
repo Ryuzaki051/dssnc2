@@ -1,6 +1,21 @@
 <div>
 
-  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Xendata</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('detector.listado') }}">Detector</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">OMP</a>
+    </li>
+   
+  </ul>
+
+
+
+{{--   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
     </li>
@@ -15,6 +30,6 @@
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-  </div>
+  </div> --}}
 
 </div>

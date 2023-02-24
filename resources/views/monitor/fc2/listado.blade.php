@@ -29,6 +29,10 @@
                                     <th>mam(%)</th>
                                     <th>storage(%)</th>
                                     <th>opt(%)</th>
+                                    <th>ram uso(%)</th>
+                                    <th>cpu(%)</th>
+                                    <th>Hilos</th>
+                                    <th>Peticiones</th>
                                     <th>actualizdo</th>
                                 </tr>
                             </thead>
@@ -95,6 +99,18 @@
                 },
                 {
                     data: 'opt_prcnt'
+                },
+                {
+                    data: 'ram'
+                },
+                {
+                    data: 'cpu'
+                },
+                {
+                    data: 'cant_hilos'
+                },
+                {
+                    data: 'peticiones'
                 },
                 {
                     data: 'updated_at'
