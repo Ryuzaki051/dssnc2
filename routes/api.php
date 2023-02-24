@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+Route::post('/savedt', [DetectorController::class, 'store'])->name('detector.store');
 Route::get('/detector', [DetectorController::class, 'datadetector'])->name('detector.data');

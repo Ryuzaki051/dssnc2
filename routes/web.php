@@ -19,7 +19,6 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('monitoreo', MonitorController::class);
-    
     Route::resource('operacion', OperacionController::class);
 
     /* Prueba */
@@ -31,11 +30,6 @@ Route::middleware([
     /* urL de la data el listado by ajax */
     Route::get('/datatables/detector', [DetectorController::class, 'datadetector'])->name('detector.data');
 
-
-    /*  */
     Route::get('/list_xd', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
-    //Route::get('/list_wllv', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
-    //Route::get('/list_xclarity', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
-    //Route::get('/list_', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
 
 });

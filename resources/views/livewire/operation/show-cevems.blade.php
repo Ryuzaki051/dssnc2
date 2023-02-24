@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css">
 
-
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -44,7 +42,6 @@
             </div>
         </div>
     </div>
-
 
     {{-- Scripts --}}
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -149,6 +146,5 @@
                         window.open(url, '_blank');
                     }
     </script>
-
 
 </div>

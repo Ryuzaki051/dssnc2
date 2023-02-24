@@ -15,16 +15,9 @@ class DetectorController extends Controller
         return view('formulario');
     }
 
-
-    public function create()
-    {
-        //
-    }
-
     public function store(Request $request)
     {
         $ip=$request->ip();
-        //$ip_detector=Detector::where('ip_detector',$ip)->first();
 
         $detectores=Detector::updateOrCreate(
             ['ip_detector'=>$ip],
@@ -42,28 +35,6 @@ class DetectorController extends Controller
         $detectores->save();
 
         return $request;
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-
-    public function edit($id)
-    {
-        //
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
     }
 
     public function listado()
