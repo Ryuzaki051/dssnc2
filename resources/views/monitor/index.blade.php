@@ -50,7 +50,7 @@
                             <div class="card-body">
 
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                    <a href="#" class="btn btn-primary" aria-current="page">Panel de Monitoreo</a>
+                                    <a href="{{ route('detector.listado') }}" class="btn btn-primary" aria-current="page">Panel de Monitoreo</a>
                                     <a href="#" class="btn btn-primary">Consulta</a>
                                     <a href="#" class="btn btn-primary">Historico</a>
                                 </div>

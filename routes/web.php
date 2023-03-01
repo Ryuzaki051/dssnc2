@@ -29,7 +29,7 @@ Route::middleware([
     Route::get('/listado', [DetectorController::class, 'listado'])->name('detector.listado');
     /* urL de la data el listado by ajax */
     Route::get('/datatables/detector', [DetectorController::class, 'datadetector'])->name('detector.data');
-
-    Route::get('/list_xd', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
+    
+    Route::get('/list_operativo', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
 
 });

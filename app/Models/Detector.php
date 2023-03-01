@@ -17,7 +17,8 @@ class Detector extends Model
         'ram',
         'cpu',
         'cant_hilos',
-        'peticiones'
+        'peticiones',
+        'updated_at'
     ];
 
     //Relacion uno a muchos inversa

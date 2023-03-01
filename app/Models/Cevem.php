@@ -21,7 +21,7 @@ class Cevem extends Model
         return $this->belongsTo(State::class);
     }
 
-    //Relacion uno a uno 
+    //Relacion uno a uno operativo
     public function fc2(){
         return $this->hasOne(FCLink::class);
     }
@@ -32,6 +32,11 @@ class Cevem extends Model
 
     public function kvm(){
         return $this->hasOne(KvmLink::class);
+    }
+
+    //Relacion uno a uno monitoreo
+    public function xendata(){
+        return $this->hasOne(Xendata::class);
     }
 
     //Relacion uno a muchos

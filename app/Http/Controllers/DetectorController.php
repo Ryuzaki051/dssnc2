@@ -43,10 +43,7 @@ class DetectorController extends Controller
     }
 
     public function datadetector(){
-        $detectores=DB::table('detectors')
-        ->join('cevems','cevems.id','=','cevem_id','cevem_id')
-        ->join('states','state_id','=','states.id')
-        ->get();
+        $detectores=DB::table('detectors')->get();
 
         $detector=datatables()->collection($detectores)->toJson();
 
@@ -55,7 +52,7 @@ class DetectorController extends Controller
 
     }
 
-
-
-
 }
+
+/*     ->join('cevems','cevems.id','=','cevem_id','cevem_id')
+    ->join('states','state_id','=','states.id') */
