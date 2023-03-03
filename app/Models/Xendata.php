@@ -10,6 +10,8 @@ class Xendata extends Model
     use HasFactory;
 
     protected $fillable=[
+        'id_exp',
+        'ip_xd',
         'OS',
         'Manufacturer',
         'Hostname',

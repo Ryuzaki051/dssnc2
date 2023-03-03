@@ -16,19 +16,21 @@ return new class extends Migration
         Schema::create('xendata', function (Blueprint $table) {
             $table->id();
 
+            $table->string('id_exp',3);
+            $table->string('ip_xd',20);
             $table->string('OS')->nullable();
             $table->string('Manufacturer',50)->nullable();
             $table->string('Hostname',50)->nullable();
             $table->string('ultimo_Archivo')->nullable();
             $table->string('Model')->nullable();
-            $table->integer('BlankC',2)->nullable();
+            $table->integer('BlankC')->default(0);
             $table->string('Cinta')->nullable();
             $table->string('versionSC')->nullable();
             $table->string('X_Libre')->nullable();
-            $table->integer('CintasFC')->nullable();
+            $table->integer('CintasFC')->default(0);
             $table->string('C_Libre')->nullable();
-            $table->date('Last_Reboot')->nullable();
-            $table->date('fechaConsulta')->nullable();
+            $table->datetime('Last_Reboot');
+            $table->datetime('fechaConsulta');
             $table->string('tipo')->nullable();
             $table->string('C_LibreP')->nullable();
             $table->string('C_Total')->nullable();

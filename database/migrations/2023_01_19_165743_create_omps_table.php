@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('omps', function (Blueprint $table) {
             $table->id();
+            $table->string('id_exp',3);
+            
             $table->timestamps();
         });
     }

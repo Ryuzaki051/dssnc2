@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('detectors', function (Blueprint $table) {
             $table->id();
+            $table->string('id_exp',3);
             $table->string('ip_detector');
             $table->double('mam_prcnt');
             $table->double('storage_prcnt');
