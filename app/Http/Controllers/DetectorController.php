@@ -53,6 +53,3 @@ class DetectorController extends Controller
     }
 
 }
-
-/*     ->join('cevems','cevems.id','=','cevem_id','cevem_id')
-    ->join('states','state_id','=','states.id') */

@@ -32,4 +32,8 @@ Route::middleware([
     
     Route::get('/list_operativo', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
 
+    /* Xendata Module */
+    Route::post('/xendatasave', [XendataController::class, 'store'])->name('xendata.store');
+    Route::post('/listado', [XendataController::class, ''])->name('xendata.');
+
 });

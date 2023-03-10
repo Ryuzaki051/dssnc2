@@ -17,24 +17,37 @@ class XendataController extends Controller
     {
         $ip=$request->ip();
 
-        $detectores=Xendata::updateOrCreate(
+        $xendatas=Xendata::updateOrCreate(
             ['ip_detector'=>$ip],
             [
-                'mam_prcnt'=>$request->mam,
-                'storage_prcnt'=>$request->storage,
-                'opt_prcnt'=>$request->opt,
-                'ram'=>$request->ram,
-                'cpu'=>$request->cpu,
-                'cant_hilos'=>$request->cant_hilos,
-                'peticiones'=>$request->peticiones
+                'OS'=>$request->OS,
+                'Manufacturer'=>$request->Manufacturer,
+                'Hostname'=>$request->Hostname,
+                'ultimo_Archivo'=>$request->ultimo_Archivo,
+                'Model'=>$request->Model,
+                'BlankC'=>$request->BlankC,
+                'Cinta'=>$request->Cinta,
+                'versionSC'=>$request->versionSC,
+                'X_Libre'=>$request->X_Libre,
+                'CintasFC'=>$request->CintasFC,
+                'C_Libre'=>$request->C_Libre,
+                'Last'=>$request->Last,
+                'fechaConsulta'=>$request->fechaConsulta,
+                'tipo'=>$request->tipo,
+                'C_LibreP'=>$request->C_LibreP,
+                'C_Total'=>$request->C_Total,
+                'Serial'=>$request->Serial,
+                'CPU'=>$request->CPU,
+                'X_LibreP'=>$request->X_LibreP,
+                'X_Total'=>$request->X_Total,
+                'RAM'=>$request->RAM,
             ]
         );
 
-        $detectores->save();
+        $xendatas->save();
 
         return $request;
     }
-
 
     public function dataXD(){
         $xendatas=DB::table('xendata')->get();
@@ -45,13 +58,5 @@ class XendataController extends Controller
         return $xendatas;
 
     }
-
-
-
-    public function show()
-    {
-        return view('operacion.xd.show');
-    }
-
 
 }

@@ -10,7 +10,6 @@ class Xendata extends Model
     use HasFactory;
 
     protected $fillable=[
-        'id_exp',
         'ip_xd',
         'OS',
         'Manufacturer',
@@ -32,7 +31,8 @@ class Xendata extends Model
         'CPU',
         'X_LibreP',
         'X_Total',
-        'RAM'
+        'RAM',
+        'cevem_id'
     ];
 
 
