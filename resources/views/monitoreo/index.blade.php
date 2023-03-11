@@ -33,7 +33,7 @@
                             <div class="card-body">
 
                                 <div class="d-grid gap-2 d-md-block">
-                                    <a href="#" class="btn btn-primary" aria-current="page">Panel de Monitoreo</a>
+                                    <a href="{{ route('monitoreo.listadoXD') }}" class="btn btn-primary" aria-current="page">Panel de Monitoreo</a>
                                     <a href="#" class="btn btn-primary">Consulta</a>
                                     <a href="#" class="btn btn-primary">Historico</a>
                                 </div>
@@ -50,9 +50,9 @@
                             <div class="card-body">
 
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                                    <a href="{{ route('detector.listado') }}" class="btn btn-primary" aria-current="page">Panel de Monitoreo</a>
-                                    <a href="#" class="btn btn-primary">Consulta</a>
-                                    <a href="#" class="btn btn-primary">Historico</a>
+                                    <a href="{{ route('monitoreo.listadoDT') }}" class="btn btn-info" aria-current="page">Panel de Monitoreo</a>
+                                    <a href="#" class="btn btn-info">Consulta</a>
+                                    <a href="#" class="btn btn-info">Historico</a>
                                 </div>
 
                             </div>
@@ -66,9 +66,9 @@
                             <div class="card-body">
 
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <a href="#" class="btn btn-primary" aria-current="page">Panel de Monitoreo</a>
-                                    <a href="#" class="btn btn-primary">Consulta</a>
-                                    <a href="#" class="btn btn-primary">Historico</a>
+                                    <a href="#" class="btn btn-success" aria-current="page">Panel de Monitoreo</a>
+                                    <a href="#" class="btn btn-success">Consulta</a>
+                                    <a href="#" class="btn btn-success">Historico</a>
                                 </div>
 
                             </div>

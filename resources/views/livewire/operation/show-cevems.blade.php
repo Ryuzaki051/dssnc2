@@ -71,7 +71,7 @@
             },
             ajax: "{{ route('operativo.listado') }}",
             columns: [{
-                    data: 'cevem_id'
+                    data: 'id_ext'
                 },
 
                 {

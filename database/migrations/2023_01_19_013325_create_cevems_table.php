@@ -18,7 +18,7 @@ class CreateCevemsTable extends Migration
         Schema::create('cevems', function (Blueprint $table) {
             $table->id();
             $table->string('cevem');
-            $table->string('id_ext');
+            $table->string('id_ext')->nullable();
             $table->string('ip',16);
             
             $table->unsignedBigInteger('state_id');

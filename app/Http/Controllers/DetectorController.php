@@ -12,7 +12,7 @@ class DetectorController extends Controller
 
     public function index()
     {
-        return view('formulario');
+        //return view('formulario');
     }
 
     public function store(Request $request)
@@ -37,17 +37,10 @@ class DetectorController extends Controller
         return $request;
     }
 
-    public function listado()
-    {
-        return view('monitor.fc2.listado');
-    }
-
     public function datadetector(){
         $detectores=DB::table('detectors')->get();
-
         $detector=datatables()->collection($detectores)->toJson();
 
-        //return $detectores;
         return $detector;
 
     }

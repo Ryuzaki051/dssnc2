@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\DetectorController;
+use App\Http\Controllers\XendataController;
 use App\Http\Controllers\OperacionController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,19 +22,25 @@ Route::middleware([
     Route::resource('monitoreo', MonitorController::class);
     Route::resource('operacion', OperacionController::class);
 
-    /* Prueba */
-    Route::get('/formulario', [DetectorController::class, 'index'])->name('detector.index');
+
+
+    /* DETECTOR */
     /* almacenamiento de registro */
     Route::post('/detectores', [DetectorController::class, 'store'])->name('detector.store');
-    /* Vista del listado de detecciones */
-    Route::get('/listado', [DetectorController::class, 'listado'])->name('detector.listado');
-    /* urL de la data el listado by ajax */
+    /* urL de la data el listado by ajax  JSON*/
     Route::get('/datatables/detector', [DetectorController::class, 'datadetector'])->name('detector.data');
-    
+    /* Vista del listado de detecciones */
+    Route::get('/listadoDT', [MonitorController::class, 'vistaDetector'])->name('monitoreo.listadoDT');
+
+    /* OPERATIVO */
     Route::get('/list_operativo', [OperacionController::class, 'listadocvm'])->name('operativo.listado');
 
-    /* Xendata Module */
+    /* XENDATA */
+    /* almacenamiento de registro */
     Route::post('/xendatasave', [XendataController::class, 'store'])->name('xendata.store');
-    Route::post('/listado', [XendataController::class, ''])->name('xendata.');
+    /* urL de la data el listado by ajax  JSON*/
+    Route::get('/datatables/xendata', [XendataController::class, 'dataxendata'])->name('xendata.data');
+    /* Vista del listado de detecciones */
+    Route::get('/listadoXD', [MonitorController::class, 'vistaXendata'])->name('monitoreo.listadoXD');
 
 });

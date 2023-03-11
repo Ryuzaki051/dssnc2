@@ -49,13 +49,11 @@ class XendataController extends Controller
         return $request;
     }
 
-    public function dataXD(){
+    public function dataxendata(){
         $xendatas=DB::table('xendata')->get();
+        $xendata=datatables()->collection($xendatas)->toJson();
 
-        $xendatas=datatables()->collection($xendatas)->toJson();
-
-        //return $xendatas;
-        return $xendatas;
+        return $xendata;
 
     }
 

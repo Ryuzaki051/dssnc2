@@ -16,7 +16,7 @@ class OperacionController extends Controller
     {
 
         $operativo = DB::table('fingerslinks')
-            ->select('state_id', 'cevem_id', 'cevem', 'state', 'name', 'url')
+            ->select('state_id', 'id_ext','cevem_id', 'cevem', 'state', 'name', 'url')
             ->join('cevems', 'cevems.id', '=', 'cevem_id')
             ->join('states', 'state_id', '=', 'states.id')
             ->join('users', 'users.id', '=', 'users_id')
@@ -74,4 +74,8 @@ class OperacionController extends Controller
 
         return $dtables;
     }
+
+
+    
 }
+
