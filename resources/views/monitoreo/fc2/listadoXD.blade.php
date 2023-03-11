@@ -26,14 +26,20 @@
                                     <th>Estado</th>
                                     <th>Cevem</th>
                                     <th>IP</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>Host</th>
+                                    <th>Cinta</th>
+                                    <th>CintaFC</th>
+                                    <th>blankC</th>
+                                    <th>C Free</th>
+                                    <th>C(%)</th>
+                                    <th>C_Total</th>
+                                    <th>X Free</th>
+                                    <th>X(%)</th>
+                                    <th>X_Total</th>
+                                    <th>Last_File</th>
+                                    <th>U.Reinicio</th>
+                                    <th>Actualizado</th>
+                                    <th>Serial</th>
                                 </tr>
                             </thead>
 
@@ -77,16 +83,61 @@
             language: {
                 "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
             },
-            ajax: "{{ route('detector.data') }}",
+            ajax: "{{ route('xendata.data') }}",
             columns: [
                 {
-                    data: 'cevem_id'
+                    data: 'id_exp'
                 },
                 {
                     data: 'state'
                 },
                 {
                     data: 'cevem'
+                },
+                {
+                    data: 'ip_xd'
+                },
+                {
+                    data: 'Hostname'
+                },
+                {
+                    data: 'Cinta'
+                },
+                {
+                    data: 'CintasFC'
+                },
+                {
+                    data: 'BlankC'
+                },
+                {
+                    data: 'C_Libre'
+                },
+                {
+                    data: 'C_LibreP'
+                },
+                {
+                    data: 'C_Total'
+                },
+                {
+                    data: 'X_Libre'
+                },
+                {
+                    data: 'X_LibreP'
+                },
+                {
+                    data: 'X_Total'
+                },
+                {
+                    data: 'ultimo_Archivo'
+                },
+                {
+                    data: 'Last_Reboot'
+                },
+                {
+                    data: 'fechaConsulta'
+                },
+                {
+                    data: 'Serial'
                 }
             ],
 

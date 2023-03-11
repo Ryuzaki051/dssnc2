@@ -18,7 +18,7 @@ class XendataController extends Controller
         $ip=$request->ip();
 
         $xendatas=Xendata::updateOrCreate(
-            ['ip_detector'=>$ip],
+            ['ip_xd'=>$ip],
             [
                 'OS'=>$request->OS,
                 'Manufacturer'=>$request->Manufacturer,
@@ -50,7 +50,13 @@ class XendataController extends Controller
     }
 
     public function dataxendata(){
-        $xendatas=DB::table('xendata')->get();
+        $xendatas=DB::table('xendata')
+                    ->join('cevems', 'cevems.id', '=', 'cevem_id')
+                    ->join('states', 'state_id', '=', 'states.id')
+                    ->select('xendata.id','id_exp','state','cevem','ip_xd','Hostname','Cinta','CintasFC','BlankC',
+                    'C_Libre','C_LibreP','C_Total','X_Libre','X_LibreP','X_Total','ultimo_Archivo',
+                    'Last_Reboot','fechaConsulta','Serial')
+                    ->get();
         $xendata=datatables()->collection($xendatas)->toJson();
 
         return $xendata;
