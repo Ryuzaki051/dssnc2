@@ -39,6 +39,13 @@ class DetectorController extends Controller
 
     public function datadetector(){
         $detectores=DB::table('detectors')->get();
+
+        // Formatear la columna "cevem_id" de cada detector como una cadena de tres dígitos
+        $detectores = $detectores->map(function($detector) {
+            $detector->cevem_id = sprintf('%03d', $detector->cevem_id);
+            return $detector;
+        });
+
         $detector=datatables()->collection($detectores)->toJson();
 
         return $detector;
